@@ -1,5 +1,4 @@
 var baseUrl = '/apis';
-console.log(baseUrl);
 //根据路由参数显示信息
         $(document).ready(function(){
             function getUrlParam(name) {

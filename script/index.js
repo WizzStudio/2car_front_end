@@ -1,5 +1,4 @@
  var baseUrl = '/apis';
-console.log(baseUrl);
 //点击汽车图片跳转到汽车详情 
             $(".car_item_img img").each(
                 function(){
