@@ -1,0 +1,35 @@
+.top2{
+     background-color: black;
+     color: white;
+     font-weight: bold;
+     display: flex;
+     align-items: center;
+     height: 5rem;
+     padding-left: 10px;
+     padding-right: 10px;
+}
+.top2 .top_return{
+    font-size: 2rem;
+}
+.top2 .top_name{
+    margin-left: 2rem;
+}
+.glyphicon-arrow-left{
+    color: white;
+}
+.contain{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.car_item_small_img{
+    margin-top: 2rem;
+}
+.box{
+    height: 7rem;
+    overflow: hidden;
+}
+.car_item_small_img_img{
+    margin-top: 2rem;
+    width: 100%;
+}
