@@ -15,12 +15,12 @@ $("#submit").click(function(){
                             },
                             dataType:'json',
                             success:function(data){
+                                alert(data.msg);                                     
                                  window.location.href="./backstageIndex.html"; 
                                  return false;
                             },
                             error:function(error){
                                 alert(error.msg);     
-                                
                             }
                         })
                     }
