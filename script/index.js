@@ -13,16 +13,37 @@
 //初始化首页
             $(document).ready(function(){
                 $.ajax({
-                    url:'',
+                    url:baseUrl+'/SecondCar/tg_carSelectAllAction',
                     type:'get',
                     dataType:'json',
                     success:function(data){
-                        data.msg.forEach(function(item,index) {
-                            
+                        console.log(baseUrl);
+                        data.cars.forEach(function(item,index) {
+                            $("#car").append(`
+                                <div class="car_item col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="car_item_img">
+                                        <img src=${item.pic} class="car_item_img_img" id="${item.cid}">
+                                    </div>    
+                                    <div class="car_item_type">
+                                        <span class="car_item_type_name">${item.brand}</span>    
+                                        <span class="car_item_type_time">
+                                            <span>年份：</span>
+                                            <span>${item.year}</span>
+                                        </span>
+                                        <span class="car_item_type_price">
+                                            <span>价格：</span>
+                                            <span>${item.year}</span>
+                                        </span>
+                                    </div>    
+                                    <div class="car_item_intro">
+                                        <p>${item.info}</p>    
+                                    </div>
+                                </div>      
+                            `)
                         })
                     },
                     error:function(error){
-                        alert(error.msg);                                
+                        alert("网络请求错误");                                
                     }
                 })
             })
