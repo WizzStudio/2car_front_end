@@ -10,41 +10,41 @@ var baseUrl = '/apis';
             console.log("当前页面id为："+id);
 //后端拿数据
             $.ajax({
-                url:'',
-                type:'get',
+                url:baseUrl+'/SecondCar/admin/tg_carSelectByIdAction',
+                type:'post',
                 data:{
-                   id:id
+                   cid:id
                 },
                 dataType:'json',
                 success:function(data){
                     $("#carInfo").html(`
                         <div class="car_item_img">
-                            <img src="${id}" class="car_item_img_img" id="bigImg">
+                            <img src="${data.car.pic}_1" class="car_item_img_img" id="bigImg">
                         </div>
                         <div class="car_item_small_img row">
-                            <div class="box col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="${id}" class="car_item_small_img_img "></div>
-                            <div class="box col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="${id}" class="car_item_small_img_img "></div>
-                            <div class="box col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="${id}" class="car_item_small_img_img "></div>
-                            <div class="box col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="${id}" class="car_item_small_img_img "></div>                  
+                            <div class="box col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="${data.car.pic}+'_1'" class="car_item_small_img_img "></div>
+                            <div class="box col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="${data.car.pic}+'_2'" class="car_item_small_img_img "></div>
+                            <div class="box col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="${data.car.pic}+'_3'" class="car_item_small_img_img "></div>
+                            <div class="box col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="${data.car.pic}+'_4'" class="car_item_small_img_img "></div>                  
                         </div>    
                         <div class="car_item_type">
-                            <span class="car_item_type_name">${id}</span>    
+                            <span class="car_item_type_name">${data.car.brand}</span>    
                             <span class="car_item_type_time">
                                 <span>年份：</span>
-                                <span>${id}</span>
+                                <span>${data.car.year}</span>
                             </span>
                                 <span class="car_item_type_price">
                                 <span>价格：</span>
-                                <span>${id}</span>
+                                <span>${data.car.price}</span>
                             </span>
                         </div>    
                         <div class="car_item_intro">
-                            <p>${id}</p>    
+                            <p>${data.car.info}</p>    
                         </div>
                     `)
                 },
                 error:function(error){
-                    alert(error.msg);                                
+                    alert("网络请求错误");                                
                 }
            })
         })

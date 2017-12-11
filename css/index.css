@@ -108,3 +108,8 @@ td{
 .contain2{
     margin-top: 5rem;
 }
+#username,#password{
+    width: 80%;
+    height: 3rem;
+    margin: 0 auto;
+}
