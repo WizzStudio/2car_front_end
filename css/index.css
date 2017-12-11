@@ -26,6 +26,21 @@ html,body{
 .top_name{
     font-size: 2rem;
 }
+table{
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    width:100%;
+    margin-top: 3rem; 
+    border-collapse:collapse;
+}
+th{
+    height:50px;
+    text-align: center;
+    vertical-align: middle;
+}
+td{
+    text-align: center;
+    vertical-align: middle;
+}
 .centerContain{
     padding: 1.5rem;
 }
