@@ -1,13 +1,76 @@
 <!-- 后台编辑车辆 -->
+<!-- 后台上传新车辆 -->
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>编辑车辆信息</title>
-</head>
-<body>
-    编辑
-</body>
+<html>
+    <head>
+        <title>二手车后台编辑</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="./css/backstageAdd.css">
+    </head>
+    <body>
+        <div class="top">
+            <div class="top_touxiang ">
+                <a href="./index.html"><img src="./images/1.jpg"></a>
+            </div>
+            <div class="top_name">吴忠二手车</div> 
+        </div>
+        <div class="contain" align="center">
+            <form class="form-horizontal">
+                <div class="form-group  form-group-lg">
+                    <label for="name" class="col-sm-2 control-label">车辆名字</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="name" placeholder="名字">
+                    </div>
+                </div>
+                <div class="form-group  form-group-lg">
+                    <label for="price" class="col-sm-2 control-label">车辆价钱</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="price" placeholder="价钱">
+                    </div>
+                </div>
+                <div class="form-group  form-group-lg">
+                    <label for="time" class="col-sm-2 control-label">车辆时间</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="time" placeholder="时间">
+                    </div>
+                </div>
+                <div class="form-group  form-group-lg">
+                    <label for="intro" class="col-sm-2 control-label">车辆介绍</label>
+                    <div class="col-sm-10">
+                        <textarea type="text" class="form-control" id="intro" placeholder="介绍" style="height:8rem"></textarea>
+                    </div>
+                </div>
+                <div class="form-group  form-group-lg">
+                    <label for="pic"  class="col-sm-2 control-label">上传照片</label>
+                    <div class="col-sm-10">
+                        <input type="file" id="pic">
+                    <!-- <p class="help-block">请上传4张</p> -->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="button" class="btn btn-primary">发布车辆</button>
+                    </div>
+                </div>
+            </form>
+        </div>    
+        <div class="footer">
+            <div class="row">
+                <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 footer_intro">
+                    <div class="footer_intro_title">吴忠人自己的二手车</div>
+                    <div class="footer_intro_address">公司地址：西安电子科技大学</div>
+                    <div class="footer_intro_phone">联系方式：18821708050</div>
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 footer_erweima">
+                    <img src="./images/1.jpg">
+                </div>
+            </div>
+       </div>               
+        <script type="text/javascript" src="./script/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="./script/backstageAdd.js"></script>
+    </body>
 </html>
