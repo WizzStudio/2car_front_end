@@ -31,8 +31,13 @@ table{
     width:100%;
     margin-top: 3rem; 
     border-collapse:collapse;
+    text-align: center;
+    font-size: 17px;
 }
 th{
+    text-align: center;
+}
+/* th{
     height:50px;
     text-align: center;
     vertical-align: middle;
@@ -40,7 +45,7 @@ th{
 td{
     text-align: center;
     vertical-align: middle;
-}
+} */
 .centerContain{
     padding: 1.5rem;
 }
