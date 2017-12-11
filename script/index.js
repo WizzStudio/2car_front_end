@@ -1,15 +1,20 @@
  var baseUrl = '/apis';
 //点击汽车图片跳转到汽车详情 
-            $(".car_item_img img").each(
-                function(){
-                    var _this = $(this);
-                    _this.click(function(){
-                        console.log(_this.attr("id"));
-                        window.location.href = "./carInfo.html?id="+_this.attr("id");
-                    })
-                    
-                }
-            )
+            // $(".car_item_img img").each(
+            //     function(){
+            //         var _this = $(this);
+            //         console.log(_this.attr("id"));
+            //         $("body").on('click','.car_item_img img',function(){    
+            //             // window.location.href = "./carInfo.html?id="+_this.attr("id");
+            //         })
+            //     }
+            // )
+            $("body").on('click','.car_item_img img',function(){ 
+                var _this = $(this);
+                console.log(_this.attr("id"));
+                window.location.href = "./carInfo.html?id="+_this.attr("id");
+            })  
+                
 //初始化首页
             $(document).ready(function(){
                 $.ajax({
@@ -17,8 +22,8 @@
                     type:'post',
                     dataType:'json',
                     success:function(data){
-                        console.log(data.cars);
-                        data.cars.forEach(function(item,index) {
+                        console.log(data);
+                        data.car.forEach(function(item,index) {
                             $("#car").append(`
                                 <div class="car_item col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                     <div class="car_item_img">
