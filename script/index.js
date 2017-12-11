@@ -13,11 +13,11 @@
 //初始化首页
             $(document).ready(function(){
                 $.ajax({
-                    url:baseUrl+'/SecondCar/tg_carSelectAllAction',
-                    type:'get',
+                    url:baseUrl+'/SecondCar/admin/tg_carSelectAllAction',
+                    type:'post',
                     dataType:'json',
                     success:function(data){
-                        console.log(baseUrl);
+                        console.log(data.cars);
                         data.cars.forEach(function(item,index) {
                             $("#car").append(`
                                 <div class="car_item col-lg-3 col-md-4 col-sm-6 col-xs-12">
@@ -32,7 +32,7 @@
                                         </span>
                                         <span class="car_item_type_price">
                                             <span>价格：</span>
-                                            <span>${item.year}</span>
+                                            <span>${item.price}</span>
                                         </span>
                                     </div>    
                                     <div class="car_item_intro">

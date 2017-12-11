@@ -7,7 +7,7 @@ $("#submit").click(function(){
         alert("请输入账号密码");
     }else{
         $.ajax({
-            url:baseUrl+'/SecondCar/tg_managerAction.action',
+            url:baseUrl+'/SecondCar/tg_managerAction',
             type:'post',
             data:{
                 username:username,
