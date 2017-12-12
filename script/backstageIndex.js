@@ -28,7 +28,26 @@ $(document).ready(function(){
 $("body").on('click','.btn-primary',function(){
     var _this = $(this);
     var id = _this.parent().parent().find("td:eq(0)").attr("id");
-    console.log(id);
     window.location.href = '../backstageWrite.html'+"?id="+id;
 })
 //删除某个车辆
+$("body").on('click','.btn-warning',function(){
+    var _this = $(this);
+    var id = _this.parent().parent().find("td:eq(0)").attr("id");
+    console.log(id);
+    $.ajax({
+        url:baseUrl+'/SecondCar/admin/tg_carDeleteByIdAction',
+        type:'post',
+        data:{
+            id:id
+        },
+        dataType:'json',
+        success:function(data){
+            alert(data.msg);
+            window.location.reload();
+        },
+        error:function(error){
+            alert("网络请求错误");
+        }
+    })    
+})
