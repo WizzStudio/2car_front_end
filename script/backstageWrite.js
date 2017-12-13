@@ -22,10 +22,10 @@ $(document).ready(function(){
             $("#price").val(data.car.price);
             $("#time").val(data.car.year);
             $("#intro").val(data.car.info);
-            $("#file").attr("src",data.car.pic)
-            $("#file1").attr("src",data.car.pic)
-            $("#file2").attr("src",data.car.pic)
-            $("#file3").attr("src",data.car.pic)
+            $("#file").attr("src",data.car.pic0)
+            $("#file1").attr("src",data.car.pic1)
+            $("#file2").attr("src",data.car.pic2)
+            $("#file3").attr("src",data.car.pic3)
         },
         error:function(error){
             alert("网络请求错误");                                

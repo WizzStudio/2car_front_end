@@ -20,13 +20,13 @@ var baseUrl = '/apis';
                     console.log(data);
                     $("#carInfo").html(`
                         <div class="car_item_img">
-                            <img src="${data.car.pic}"+'_0' class="car_item_img_img" id="bigImg">
+                            <img src="${data.car.pic0}"+'_0' class="car_item_img_img" id="bigImg">
                         </div>
                         <div class="car_item_small_img row">
-                            <div class="box col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="${data.car.pic}"+'_0' class="car_item_small_img_img "></div>
-                            <div class="box col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="${data.car.pic}"+'_1' class="car_item_small_img_img "></div>
-                            <div class="box col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="${data.car.pic}"+'_2' class="car_item_small_img_img "></div>
-                            <div class="box col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="${data.car.pic}"+'_3' class="car_item_small_img_img "></div>                  
+                            <div class="box col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="${data.car.pic0}" class="car_item_small_img_img "></div>
+                            <div class="box col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="${data.car.pic1}" class="car_item_small_img_img "></div>
+                            <div class="box col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="${data.car.pic2}" class="car_item_small_img_img "></div>
+                            <div class="box col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="${data.car.pic3}" class="car_item_small_img_img "></div>                  
                         </div>    
                         <div class="car_item_type">
                             <span class="car_item_type_name">${data.car.brand}</span>    
