@@ -5,10 +5,10 @@
     var price = $("#price").val();
     var time = $("#time").val();
     var intro = $("#intro").val();
-    var file = $("#pic1").val();    
-    var file1 = $("#pic2").val();    
-    var file2 = $("#pic3").val();    
-    var file3 = $("#pic4").val();
+    var file = $("#pic").val();    
+    var file1 = $("#pic1").val();    
+    var file2 = $("#pic2").val();    
+    var file3 = $("#pic3").val();
     var data = {
         brand:name,
         price:price,
@@ -24,9 +24,10 @@
         url:baseUrl + '/SecondCar/admin/tg_carAddAction',
         type:'post',
         data:data,
+        contentType:"multipart/form-data",
         dataType:'json',
         success:function(data){
-            console.log("cheng");
+            console.log(data);
             if(data.code == 1){
                 alert(data.msg);                                     
                 window.location.href="./backstageIndex.html"; 
@@ -37,7 +38,7 @@
             
         },
         error:function(error){
-            alert("网络请求错误");     
+            alert("网络请求错误了啊");     
         }
     })
 })
