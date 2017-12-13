@@ -18,14 +18,14 @@ $(document).ready(function(){
         dataType:'json',
         success:function(data){
             console.log(data);
-            $("#name").val(data.car.brand);
-            $("#price").val(data.car.price);
-            $("#time").val(data.car.year);
-            $("#intro").val(data.car.info);
-            $("#file").attr("src",data.car.pic0)
-            $("#file1").attr("src",data.car.pic1)
-            $("#file2").attr("src",data.car.pic2)
-            $("#file3").attr("src",data.car.pic3)
+            $("#name").val(data.car.tg_car.brand);
+            $("#price").val(data.car.tg_car.price);
+            $("#time").val(data.car.tg_car.year);
+            $("#intro").val(data.car.tg_car.info);
+            $("#file").attr("src",data.car.urls[0]);
+            $("#file1").attr("src",data.car.urls[1]);
+            $("#file2").attr("src",data.car.urls[2]);
+            $("#file3").attr("src",data.car.urls[3]);
         },
         error:function(error){
             alert("网络请求错误");                                
@@ -37,29 +37,29 @@ $(document).ready(function(){
         var price = $("#price").val();
         var time = $("#time").val();
         var intro = $("#intro").val();
-        var file = $("#pic1").val();    
-        var file1 = $("#pic2").val();    
-        var file2 = $("#pic3").val();    
-        var file3 = $("#pic4").val();
-        var data = {
-            id:id,
-            brand:name,
-            price:price,
-            year:time,
-            info:intro,
-            file:file,
-            file1:file1,
-            file2:file2,
-            file3:file3
-        };
-        console.log(data); 
+        // var file = $("#pic1")[0].files[0];    
+        // var file1 = $("#pic2")[0].files[0];  
+        // var file2 = $("#pic3")[0].files[0];    
+        // var file3 = $("#pic4")[0].files[0];
+        var formData = new FormData();
+        formData.append('brand', name);
+        formData.append('id', id);
+        formData.append('price', price);
+        formData.append('year',time);
+        formData.append('info', intro);
+        // formData.append('file', file);
+        // formData.append('file1', file1);
+        // formData.append('file2', file2);
+        // formData.append('file3', file3);
         $.ajax({
             url:baseUrl + '/SecondCar/admin/tg_carUpdateAllAction',
             type:'post',
-            data:data,
+            data:formData,
+            contentType: false,
+            processData: false,
             dataType:'json',
             success:function(data){
-                console.log("cheng");
+                console.log(data);
                 if(data.code == 1){
                     alert(data.msg);                                     
                     window.location.href="./backstageIndex.html"; 
@@ -70,7 +70,7 @@ $(document).ready(function(){
                 
             },
             error:function(error){
-                alert("网络请求错误");     
+                alert("网络请求错误了啊");     
             }
         })
     })
