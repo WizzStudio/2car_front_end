@@ -5,25 +5,25 @@
     var price = $("#price").val();
     var time = $("#time").val();
     var intro = $("#intro").val();
-    var file = new FormData($("#pic")[0].files[0]);    
-    var file1 = new FormData($("#pic1")[0].files[0]);  
-    var file2 = new FormData($("#pic2")[0].files[0]);    
-    var file3 = new FormData($("#pic3")[0].files[0]);
-    var data = {
-        brand:name,
-        price:price,
-        year:time,
-        info:intro,
-        file:file,
-        file1:file1,
-        file2:file2,
-        file3:file3
-    };
-    console.log(data); 
+    var file = $("#pic")[0].files[0];    
+    var file1 = $("#pic")[0].files[0];  
+    var file2 = $("#pic")[0].files[0];    
+    var file3 = $("#pic")[0].files[0];
+    var formData = new FormData();
+    formData.append('brand', name);
+    formData.append('price', price);
+    formData.append('year',time);
+    formData.append('info', intro);
+    formData.append('file', file);
+    formData.append('file1', file1);
+    formData.append('file2', file2);
+    formData.append('file3', file3);
     $.ajax({
         url:baseUrl + '/SecondCar/admin/tg_carAddAction',
         type:'post',
-        data:data,
+        data:formData,
+        contentType: false,
+        processData: false,
         dataType:'json',
         success:function(data){
             console.log(data);
