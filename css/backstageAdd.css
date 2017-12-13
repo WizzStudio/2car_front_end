@@ -6,8 +6,20 @@ form.form-horizontal{
     padding-top: 7px;
     margin-bottom: 0;
     text-align: center;
+    
 }
 .contain{
     padding-left: 2rem;
     padding-right: 2rem;
+}
+.car_item_small_img{
+    margin-top: 2rem;
+}
+.box{
+    height: 7rem;
+    overflow: hidden;
+}
+.car_item_small_img_img{
+    margin-top: 2rem;
+    width: 100%;
 }
