@@ -18,6 +18,7 @@ form.form-horizontal{
 .box{
     height: 7rem;
     overflow: hidden;
+    position: relative;
 }
 .car_item_small_img_img{
     margin-top: 2rem;

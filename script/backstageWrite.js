@@ -37,20 +37,20 @@ $(document).ready(function(){
         var price = $("#price").val();
         var time = $("#time").val();
         var intro = $("#intro").val();
-        // var file = $("#pic1")[0].files[0];    
-        // var file1 = $("#pic2")[0].files[0];  
-        // var file2 = $("#pic3")[0].files[0];    
-        // var file3 = $("#pic4")[0].files[0];
+        var file = $("#pic1")[0].files[0];    
+        var file1 = $("#pic2")[0].files[0];  
+        var file2 = $("#pic3")[0].files[0];    
+        var file3 = $("#pic4")[0].files[0];
         var formData = new FormData();
         formData.append('brand', name);
         formData.append('id', id);
         formData.append('price', price);
         formData.append('year',time);
         formData.append('info', intro);
-        // formData.append('file', file);
-        // formData.append('file1', file1);
-        // formData.append('file2', file2);
-        // formData.append('file3', file3);
+        formData.append('pic', file);
+        formData.append('pic1', file1);
+        formData.append('pic2', file2);
+        formData.append('pic3', file3);
         $.ajax({
             url:baseUrl + '/SecondCar/admin/tg_carUpdateAllAction',
             type:'post',
@@ -74,4 +74,12 @@ $(document).ready(function(){
             }
         })
     })
+//删除图片并添加新图
+$(".delete").each(function(){
+    var _this = $(this);
+    _this.click(function(){
+        _this.prev().remove();
+        _this.next().css("display","block");
+    })
+})    
 })
