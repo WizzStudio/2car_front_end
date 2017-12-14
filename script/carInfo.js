@@ -50,10 +50,8 @@ var baseUrl = '/apis';
            })
         })
 //小图变大图
-        $(".car_item_small_img_img").each(function(){
-            var src = $(this).attr("src");
-            $(this).click(function(){
-                console.log("变大");
-                $("#bigImg").attr("src",src);
-            })
-        })
+        $("body").on('click','.car_item_small_img_img',function(){ 
+            var _this = $(this);
+            src = _this.attr("src");
+            $("#bigImg").attr("src",src);
+        }) 
