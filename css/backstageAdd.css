@@ -16,11 +16,21 @@ form.form-horizontal{
     margin-top: 2rem;
 }
 .box{
-    height: 7rem;
+    height: 11rem;
     overflow: hidden;
     position: relative;
 }
 .car_item_small_img_img{
     margin-top: 2rem;
     width: 100%;
+}
+#nextview,#nextview1,#nextview2,#nextview3{
+    margin-top: 10px;
+    display: inline-block;
+    text-align: center;
+}
+.imgShow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
