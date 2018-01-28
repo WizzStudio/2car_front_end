@@ -19,7 +19,7 @@ var baseUrl = '/apis';
                 success:function(data){
                     console.log(data);
                     $("#carInfo").html(`
-                        <div class="car_item_img">
+                        <div class="car_item_img car_item_img_new">
                             <img src="${data.car.urls[0]}" class="car_item_img_img" id="bigImg">
                         </div>
                         <div class="car_item_small_img row">
@@ -29,15 +29,15 @@ var baseUrl = '/apis';
                             <div class="box col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="${data.car.urls[3]}" class="car_item_small_img_img"></div>                  
                         </div>    
                         <div class="car_item_type">
-                            <span class="car_item_type_name">${data.car.tg_car.brand}</span>    
-                            <span class="car_item_type_time">
+                            <div class="car_item_type_name">${data.car.tg_car.brand}</div>    
+                            <div class="car_item_type_time">
                                 <span>年份：</span>
                                 <span>${data.car.tg_car.year}</span>
-                            </span>
-                                <span class="car_item_type_price">
+                            </div>
+                            <div class="car_item_type_price">
                                 <span>价格：</span>
                                 <span>${data.car.tg_car.price}</span>
-                            </span>
+                            </div>
                         </div>    
                         <div class="car_item_intro">
                             <p>${data.car.tg_car.info}</p>    

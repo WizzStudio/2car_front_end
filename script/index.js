@@ -31,15 +31,15 @@
                                         <img src=${item.pic} class="car_item_img_img" id="${item.cid}">
                                     </div>    
                                     <div class="car_item_type">
-                                        <span class="car_item_type_name">${item.brand}</span>    
-                                        <span class="car_item_type_time">
+                                        <div class="car_item_type_name">${item.brand}</div>    
+                                        <div class="car_item_type_time">
                                             <span>年份：</span>
                                             <span>${item.year}</span>
-                                        </span>
-                                        <span class="car_item_type_price">
+                                        </div>
+                                        <div class="car_item_type_price">
                                             <span>价格：</span>
                                             <span>${item.price}</span>
-                                        </span>
+                                        </div>
                                     </div>    
                                     <div class="car_item_intro">
                                         <p>${item.info}</p>    

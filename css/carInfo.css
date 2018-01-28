@@ -28,8 +28,17 @@
 .box{
     height: 7rem;
     overflow: hidden;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 .car_item_small_img_img{
     margin-top: 2rem;
     width: 100%;
+}
+.car_item_type_name{
+    font-size: 2rem;
+}
+.car_item_img_new{
+    padding-left: 10px;
+    padding-right: 10px;
 }

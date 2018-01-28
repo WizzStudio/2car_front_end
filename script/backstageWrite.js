@@ -51,6 +51,10 @@ $(document).ready(function(){
         formData.append('pic1', file1);
         formData.append('pic2', file2);
         formData.append('pic3', file3);
+        console.log(file);
+        console.log(file1);
+        console.log(file2);
+        console.log(file3);
         $.ajax({
             url:baseUrl + '/SecondCar/admin/tg_carUpdateAllAction',
             type:'post',
