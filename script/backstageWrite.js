@@ -37,10 +37,10 @@ $(document).ready(function(){
         var price = $("#price").val();
         var time = $("#time").val();
         var intro = $("#intro").val();
-        var file = $("#pic1")[0].files[0];    
-        var file1 = $("#pic2")[0].files[0];  
-        var file2 = $("#pic3")[0].files[0];    
-        var file3 = $("#pic4")[0].files[0];
+        var file = $("#pic")[0].files[0];    
+        var file1 = $("#pic1")[0].files[0];  
+        var file2 = $("#pic2")[0].files[0];    
+        var file3 = $("#pic3")[0].files[0];
         var formData = new FormData();
         formData.append('brand', name);
         formData.append('id', id);
