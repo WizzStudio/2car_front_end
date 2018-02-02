@@ -59,8 +59,8 @@
                     var n = 0,
                     imgNum = $(".car_item_img_img").length,
                     img = $('.car_item_img_img');
-                    console.log(imgNum)
-                    console.log(img.attr("src"));
+                    // console.log(imgNum)
+                    // console.log(img.attr("src"));
                     lazyload();
                     $(window).scroll(lazyload);
                     function lazyload(event) {
