@@ -59,8 +59,10 @@ td{
 }
 .car_item{
     margin-bottom: 3rem;
-    height:400px;
     overflow: hidden;
+}
+.index_car_item{
+    height:400px;
 }
 .car_item_intro{
     margin-top: 1rem;

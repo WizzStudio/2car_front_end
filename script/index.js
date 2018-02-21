@@ -26,7 +26,7 @@
                         data.car.forEach(function(item,index) {
                             console.log(item)
                             $("#car").append(`
-                                <div class="car_item col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                <div class="car_item index_car_item col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                     <div class="car_item_img">
                                         <img src="images/1.jpg" data-src=${item.pic} class="car_item_img_img" id="${item.cid}">
                                     </div>    
