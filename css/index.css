@@ -29,6 +29,7 @@ html,body{
     height: 4rem;
     overflow: hidden;
     border-radius: 2rem;
+    margin-top: 1rem;
 }
 .top_touxiang img{
     width: 100%;
@@ -111,7 +112,7 @@ td{
 }
 .footer_erweima{
     width: 7rem;
-    height: 4rem;
+    height: 7rem;
     overflow: hidden;
 }
 .footer_erweima img{
