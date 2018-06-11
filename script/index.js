@@ -42,7 +42,7 @@
                                         </div>
                                     </div>    
                                     <div class="car_item_intro">
-                                        <p>${item.info}</p>    
+                                        <p class="overflow">${item.info}</p>    
                                     </div>
                                 </div>      
                             `)
